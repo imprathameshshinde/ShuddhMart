@@ -101,10 +101,16 @@ function shareWhatsApp() {
         message += `\n• ${item.productName} ${item.size} - Qty: ${item.quantity}, Total: ₹${total}`;
     });
 
-    let whatsappURL = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    // ✅ Universal WhatsApp share link (works on mobile & web)
+    let phone = "917039954457"; // without + or spaces
+     let whatsappURL = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+
+    
+
     window.open(whatsappURL, '_blank');
     setTimeout(() => location.reload(), 2000);
 }
+
 
 // Modal handling
 document.getElementById("openOrderBtn").onclick = () => {
