@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shudd Mart</title>
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -28,147 +28,17 @@
         <input type="text" id="address" placeholder="Enter your address">
 
         <label>Product & Size:</label>
-
-        <!-- 👉 Future price changes: sirf yaha values me last number change karna hai -->
-        
         <select id="product">
-
-  <!-- COCA-COLA -->
-  <option value="COCA-COLA|1L|16">COCA-COLA 1L</option>
-  <option value="COCA-COLA|250ml|36">COCA-COLA 250ml</option>
-  <option value="COCA-COLA|750ml|46">COCA-COLA 750ml</option>
-  <option value="COCA-COLA|2L|95">COCA-COLA 2L</option>
-  <option value="COCA-COLA|Coke Can 180ml|36">Coke Can 180ml</option>
-  <option value="COCA-COLA|Coke Can 300ml|21">Coke Can 300ml</option>
-
-  <!-- PEPSI -->
-  <option value="PEPSI|250ml|16">PEPSI 250ml</option>
-  <option value="PEPSI|750ml|41">PEPSI 750ml</option>
-  <option value="PEPSI|1L|46">PEPSI 1L</option>
-  <option value="PEPSI|2.25L|96">PEPSI 2.25L</option>
-  <option value="PEPSI|Pepsi Can 250ml|31">Pepsi Can 250ml</option>
-  <option value="PEPSI|Pepsi Can 180ml|21">Pepsi Can 180ml</option>
-
-  <!-- MIRINDA -->
-  <option value="MIRINDA|250ml|16">MIRINDA 250ml</option>
-  <option value="MIRINDA|750ml|36">MIRINDA 750ml</option>
-  <option value="MIRINDA|1L|46">MIRINDA 1L</option>
-  <option value="MIRINDA|2.25L|96">MIRINDA 2.25L</option>
-  <option value="MIRINDA|Mirinda Can 250ml|36">Mirinda Can 250ml</option>
-
-  <!-- 7UP -->
-  <option value="7UP|250ml|16">7UP 250ml</option>
-  <option value="7UP|750ml|36">7UP 750ml</option>
-  <option value="7UP|1L|46">7UP 1L</option>
-  <option value="7UP|2.25L|96">7UP 2.25L</option>
-  <option value="7UP|7UP Can 250ml|31">7UP Can 250ml</option>
-
-  <!-- FANTA -->
-  <option value="FANTA|250ml|16">FANTA 250ml</option>
-  <option value="FANTA|750ml|36">FANTA 750ml</option>
-  <option value="FANTA|1L|46">FANTA 1L</option>
-  <option value="FANTA|2L|96">FANTA 2L</option>
-  <option value="FANTA|Fanta Can 300ml|36">Fanta Can 300ml</option>
-  <option value="FANTA|Fanta Can 180ml|21">Fanta Can 180ml</option>
-
-  <!-- THUMS UP -->
-  <option value="THUMS UP|250ml|16">THUMS UP 250ml</option>
-  <option value="THUMS UP|750ml|41">THUMS UP 750ml</option>
-  <option value="THUMS UP|1L|46">THUMS UP 1L</option>
-  <option value="THUMS UP|2L|96">THUMS UP 2L</option>
-  <option value="THUMS UP|Thums Up Can 300ml|36">Thums Up Can 300ml</option>
-  <option value="THUMS UP|Thums Up Can 180ml|21">Thums Up Can 180ml</option>
-
-  <!-- LIMCA -->
-  <option value="LIMCA|250ml|16">LIMCA 250ml</option>
-  <option value="LIMCA|750ml|36">LIMCA 750ml</option>
-  <option value="LIMCA|1L|46">LIMCA 1L</option>
-  <option value="LIMCA|2L|96">LIMCA 2L</option>
-  <option value="LIMCA|Limca Can 300ml|36">Limca Can 300ml</option>
-  <option value="LIMCA|Limca Can 180ml|21">Limca Can 180ml</option>
-
-  <!-- MOUNTAIN DEW -->
-  <option value="MOUNTAIN DEW|250ml|16">MOUNTAIN DEW 250ml</option>
-  <option value="MOUNTAIN DEW|750ml|36">MOUNTAIN DEW 750ml</option>
-  <option value="MOUNTAIN DEW|1L|46">MOUNTAIN DEW 1L</option>
-  <option value="MOUNTAIN DEW|2.25L|96">MOUNTAIN DEW 2.25L</option>
-
-  <!-- CAMPA COLA -->
-  <option value="CAMPA COLA|Campa Cola/Orange/Lemon 200ml|6">Campa Cola/Orange/Lemon 200ml</option>
-  <option value="CAMPA COLA|Campa 500ml|16">Campa 500ml</option>
-  <option value="CAMPA COLA|Campa 1L|36">Campa 1L</option>
-  <option value="CAMPA COLA|Campa 2L|76">Campa 2L</option>
-  <option value="CAMPA COLA|Campa 200ml Can|16">Campa 200ml Can</option>
-
-  <!-- SPINNER ENERGY CAN -->
-  <option value="SPINNER ENERGY CAN|Spinner Energy Can 200ml|26">Spinner Energy Can 200ml</option>
-  <option value="SPINNER ENERGY CAN|Spinner Energy 250ml|16">Spinner Energy 250ml</option>
-
-  <!-- SPRITE -->
-  <option value="SPRITE|250ml|16">SPRITE 250ml</option>
-  <option value="SPRITE|750ml|41">SPRITE 750ml</option>
-  <option value="SPRITE|1L|46">SPRITE 1L</option>
-  <option value="SPRITE|2L|96">SPRITE 2L</option>
-  <option value="SPRITE|Sprite Can 300ml|36">Sprite Can 300ml</option>
-  <option value="SPRITE|Sprite Can 180ml|21">Sprite Can 180ml</option>
-
-  <!-- MAAZA -->
-  <option value="MAAZA|150ml|6">MAAZA 150ml</option>
-  <option value="MAAZA|600ml|36">MAAZA 600ml</option>
-  <option value="MAAZA|1L|66">MAAZA 1L</option>
-  <option value="MAAZA|1.75L|96">MAAZA 1.75L</option>
-  <option value="MAAZA|Maaza Can 300ml|36">Maaza Can 300ml</option>
-
-  <!-- FROOTI -->
-  <option value="FROOTI|125ml|9">FROOTI 125ml</option>
-  <option value="FROOTI|250ml|16">FROOTI 250ml</option>
-  <option value="FROOTI|600ml|36">FROOTI 600ml</option>
-  <option value="FROOTI|1L|71">FROOTI 1L</option>
-  <option value="FROOTI|2L|126">FROOTI 2L</option>
-
-  <!-- LEHORI ZEERA -->
-  <option value="LEHORI ZEERA|Lahori Zeera 160ml|10">Lahori Zeera 160ml</option>
-  <option value="LEHORI ZEERA|Lahori Zeera 300ml|16">Lahori Zeera 300ml</option>
-
-  <!-- FIZZ -->
-  <option value="FIZZ|125ml|9">FIZZ 125ml</option>
-  <option value="FIZZ|250ml|16">FIZZ 250ml</option>
-
-  <!-- STING -->
-  <option value="STING|250ml|16">STING 250ml</option>
-  <option value="STING|500ml|36">STING 500ml</option>
-  <option value="STING|Sting Can 250ml|50">Sting Can 250ml</option>
-
-  <!-- BISLERI -->
-  <option value="BISLERI|250ml|5">BISLERI 250ml</option>
-  <option value="BISLERI|500ml|6">BISLERI 500ml</option>
-  <option value="BISLERI|1L|16">BISLERI 1L</option>
-  <option value="BISLERI|2L|36">BISLERI 2L</option>
-
-  <!-- REAL JUICE -->
-  <option value="REAL JUICE|1L|130">REAL JUICE 1L</option>
-  <option value="REAL JUICE|500ml|80">REAL JUICE 500ml</option>
-
-  <!-- PAPER BOAT -->
-  <option value="PAPER BOAT|10rs|8">PAPER BOAT 10rs</option>
-  <option value="PAPER BOAT|20rs|16">PAPER BOAT 20rs</option>
-  <option value="PAPER BOAT|30rs|26">PAPER BOAT 30rs</option>
-
-  <!-- CAN -->
-  <option value="CAN|Diet Coke Can 300ml|36">Diet Coke Can 300ml</option>
-
-  <!-- REDBULL -->
-  <option value="REDBULL|250ml (Can)|106">REDBULL 250ml (Can)</option>
-
-  <!-- HELL -->
-  <option value="HELL|250ml (Can)|56">HELL 250ml (Can)</option>
-
-  <!-- MONSTER -->
-  <option value="MONSTER|500ml|395">MONSTER 500ml</option>
-  <option value="MONSTER|350ml|121">MONSTER 350ml</option>
-
-</select>
-
+            <!-- 👉 Future price changes: sirf yaha values me last number change karna hai -->
+            <option value="COCA-COLA|1L|16">COCA-COLA 1L</option>
+            <option value="COCA-COLA|2L|95">COCA-COLA 2L</option>
+            <option value="PEPSI|1L|46">PEPSI 1L</option>
+            <option value="PEPSI|2.25L|96">PEPSI 2.25L</option>
+            <option value="MAAZA|1L|66">MAAZA 1L</option>
+            <option value="FROOTI|2L|126">FROOTI 2L</option>
+            <option value="REDBULL|250ml|106">RedBull 250ml (Can)</option>
+            <option value="MONSTER|500ml|395">Monster 500ml</option>
+        </select>
 
         <label>Quantity:</label>
         <input type="number" id="quantity" value="0" min="0">
@@ -193,8 +63,8 @@
         </div>
 
         <button class="actionBtn" id="calculateBtn">Calculate Total</button>
-      <!----  <button class="actionBtn" id="submitBtn">Submit Order</button> { in future if you want to add this option { chage in aslo .js file}}--> 
         <button class="actionBtn" id="whatsappBtn">Share on WhatsApp</button>
+        <button class="actionBtn" id="submitBtn">Submit Order</button>
         <div id="result"></div>
     </div>
 </div>

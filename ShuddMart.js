@@ -70,16 +70,16 @@ function calculateTotal() {
          <b>Total Price:</b> ₹${totalPrice}`;
 }
 
-// Submit order { in future if you want to add this option { chage in aslo html file}}
-// function submitOrder() {
-//    if (cart.length === 0) {
-//       alert("आपकी कार्ट खाली है | Your cart is empty");
-//       return;
-//  }
-//   calculateTotal();
-//   alert("🙏 धन्यवाद! आपका ऑर्डर सफलतापूर्वक दर्ज हो गया | Thank You! Your order has been submitted.");
+// Submit order
+function submitOrder() {
+    if (cart.length === 0) {
+        alert("आपकी कार्ट खाली है | Your cart is empty");
+        return;
+    }
+    calculateTotal();
+    alert("🙏 धन्यवाद! आपका ऑर्डर कृपया इसे व्हाट्सऐप पर साझा करें। | Thank You! Your order Plz Share this on whatsapp");
     
- //}
+}
 
 // Share on WhatsApp
 function shareWhatsApp() {
