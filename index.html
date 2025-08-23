@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -337,4 +338,345 @@ function shareWhatsApp(){
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shudd Mart</title>
+<style>
+/* Body & background */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.home {
+    background: url('https://images.unsplash.com/photo-1598514983284-c5c4ee3f7f90?auto=format&fit=crop&w=1050&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.home h1 { font-size: 36px; margin-bottom: 10px; text-shadow: 2px 2px 5px #000; }
+.home p { font-size: 18px; margin-bottom: 20px; text-shadow: 1px 1px 3px #000; }
+.home button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #ff4500;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.home button:hover { background-color: #e03e00; }
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    overflow: auto;
+}
+.modal-content {
+    background: white;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 95%;
+    max-width: 600px;
+    position: relative;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Order form inside modal */
+label { display:block; margin-top:10px; }
+input, select { padding:6px; width:100%; margin-bottom:10px; box-sizing:border-box; }
+button.actionBtn { width: 100%; margin:5px 0; padding:10px; font-size:16px; background:#1E90FF; color:white; border:none; cursor:pointer; border-radius:5px; }
+button.actionBtn:hover { background:#0b70d1; }
+table { width:100%; border-collapse: collapse; margin-top:10px; }
+th, td { border:1px solid #ddd; padding:6px; text-align:center; }
+th { background:#1E90FF; color:white; }
+input[type=number]{ width:50px; }
+#result { margin-top:10px; font-size:16px; }
+
+/* Responsive */
+@media(max-width:600px){
+    .home h1{ font-size:28px; }
+    .home p{ font-size:16px; }
+    .modal-content{ width: 95%; }
+}
+</style>
+</head>
+<body>
+
+<div class="home">
+    <h1>Shudd Mart</h1>
+    <p>Fresh Drinks Delivered To Your Doorstep</p>
+    <button id="openOrderBtn">Book Your Order</button>
+</div>
+
+<!-- Modal -->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Place Your Order</h2>
+
+        <label for="username">Your Name:</label>
+        <input type="text" id="username" placeholder="Enter your name">
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" placeholder="Enter your address">
+
+        <label>Product & Size:</label>
+
+<select id="product">
+    <!-- COCA-COLA -->
+    <option value="COCA-COLA|1L|16">COCA-COLA 1L</option>
+    <option value="COCA-COLA|250ml|36">COCA-COLA 250ml</option>
+    <option value="COCA-COLA|750ml|46">COCA-COLA 750ml</option>
+    <option value="COCA-COLA|2L|95">COCA-COLA 2L</option>
+    <option value="COCA-COLA|Coke Can 180ml|36">Coke Can 180ml</option>
+    <option value="COCA-COLA|Coke Can 300ml|21">Coke Can 300ml</option>
+    <!-- PEPSI -->
+    <option value="PEPSI|250ml|16">PEPSI 250ml</option>
+    <option value="PEPSI|750ml|41">PEPSI 750ml</option>
+    <option value="PEPSI|1L|46">PEPSI 1L</option>
+    <option value="PEPSI|2.25L|96">PEPSI 2.25L</option>
+    <option value="PEPSI|Pepsi Can 250ml|31">Pepsi Can 250ml</option>
+    <option value="PEPSI|Pepsi Can 180ml|21">Pepsi Can 180ml</option>
+    <!-- MIRINDA -->
+    <option value="MIRINDA|250ml|16">MIRINDA 250ml</option>
+    <option value="MIRINDA|750ml|36">MIRINDA 750ml</option>
+    <option value="MIRINDA|1L|46">MIRINDA 1L</option>
+    <option value="MIRINDA|2.25L|96">MIRINDA 2.25L</option>
+    <option value="MIRINDA|Mirinda Can 250ml|36">Mirinda Can 250ml</option>
+    <!-- 7UP -->
+    <option value="7UP|250ml|16">7UP 250ml</option>
+    <option value="7UP|750ml|36">7UP 750ml</option>
+    <option value="7UP|1L|46">7UP 1L</option>
+    <option value="7UP|2.25L|96">7UP 2.25L</option>
+    <option value="7UP|7UP Can 250ml|31">7UP Can 250ml</option>
+    <!-- FANTA -->
+    <option value="FANTA|250ml|16">FANTA 250ml</option>
+    <option value="FANTA|750ml|36">FANTA 750ml</option>
+    <option value="FANTA|1L|46">FANTA 1L</option>
+    <option value="FANTA|2L|96">FANTA 2L</option>
+    <option value="FANTA|Fanta Can 300ml|36">Fanta Can 300ml</option>
+    <option value="FANTA|Fanta Can 180ml|21">Fanta Can 180ml</option>
+    <!-- THUMS UP -->
+    <option value="THUMS UP|250ml|16">THUMS UP 250ml</option>
+    <option value="THUMS UP|750ml|41">THUMS UP 750ml</option>
+    <option value="THUMS UP|1L|46">THUMS UP 1L</option>
+    <option value="THUMS UP|2L|96">THUMS UP 2L</option>
+    <option value="THUMS UP|Thums Up Can 300ml|36">Thums Up Can 300ml</option>
+    <option value="THUMS UP|Thums Up Can 180ml|21">Thums Up Can 180ml</option>
+    <!-- LIMCA -->
+    <option value="LIMCA|250ml|16">LIMCA 250ml</option>
+    <option value="LIMCA|750ml|36">LIMCA 750ml</option>
+    <option value="LIMCA|1L|46">LIMCA 1L</option>
+    <option value="LIMCA|2L|96">LIMCA 2L</option>
+    <option value="LIMCA|Limca Can 300ml|36">Limca Can 300ml</option>
+    <option value="LIMCA|Limca Can 180ml|21">Limca Can 180ml</option>
+    <!-- MOUNTAIN DEW -->
+    <option value="MOUNTAIN DEW|250ml|16">MOUNTAIN DEW 250ml</option>
+    <option value="MOUNTAIN DEW|750ml|36">MOUNTAIN DEW 750ml</option>
+    <option value="MOUNTAIN DEW|1L|46">MOUNTAIN DEW 1L</option>
+    <option value="MOUNTAIN DEW|2.25L|96">MOUNTAIN DEW 2.25L</option>
+    <!-- CAMPA COLA -->
+    <option value="CAMPA COLA|Campa Cola/Orange/Lemon 200ml|6">Campa Cola/Orange/Lemon 200ml</option>
+    <option value="CAMPA COLA|Campa 500ml|16">Campa 500ml</option>
+    <option value="CAMPA COLA|Campa 1L|36">Campa 1L</option>
+    <option value="CAMPA COLA|Campa 2L|76">Campa 2L</option>
+    <option value="CAMPA COLA|Campa 200ml Can|16">Campa 200ml Can</option>
+    <!-- Spinner Energy Can -->
+    <option value="SPINNER ENERGY CAN|Spinner Energy Can 200ml|26">Spinner Energy Can 200ml</option>
+    <option value="SPINNER ENERGY CAN|Spinner Energy 250ml|16">Spinner Energy 250ml</option>
+    <!-- SPRITE -->
+    <option value="SPRITE|250ml|16">SPRITE 250ml</option>
+    <option value="SPRITE|750ml|41">SPRITE 750ml</option>
+    <option value="SPRITE|1L|46">SPRITE 1L</option>
+    <option value="SPRITE|2L|96">SPRITE 2L</option>
+    <option value="SPRITE|Sprite Can 300ml|36">Sprite Can 300ml</option>
+    <option value="SPRITE|Sprite Can 180ml|21">Sprite Can 180ml</option>
+    <!-- MAAZA -->
+    <option value="MAAZA|150ml|6">MAAZA 150ml</option>
+    <option value="MAAZA|600ml|36">MAAZA 600ml</option>
+    <option value="MAAZA|1L|66">MAAZA 1L</option>
+    <option value="MAAZA|1.75L|96">MAAZA 1.75L</option>
+    <option value="MAAZA|Maaza Can 300ml|36">Maaza Can 300ml</option>
+    <!-- FROOTI -->
+    <option value="FROOTI|125ml|9">FROOTI 125ml</option>
+    <option value="FROOTI|250ml|16">FROOTI 250ml</option>
+    <option value="FROOTI|600ml|36">FROOTI 600ml</option>
+    <option value="FROOTI|1L|71">FROOTI 1L</option>
+    <option value="FROOTI|2L|126">FROOTI 2L</option>
+    <!-- LEHORI ZEERA -->
+    <option value="LEHORI ZEERA|Lahori Zeera 160ml|10">Lahori Zeera 160ml</option>
+    <option value="LEHORI ZEERA|Lahori Zeera 300ml|16">Lahori Zeera 300ml</option>
+    <!-- FIZZ -->
+    <option value="FIZZ|125ml|9">FIZZ 125ml</option>
+    <option value="FIZZ|250ml|16">FIZZ 250ml</option>
+    <!-- STING -->
+    <option value="STING|250ml|16">STING 250ml</option>
+    <option value="STING|500ml|36">STING 500ml</option>
+    <option value="STING|Sting Can 250ml|50">Sting Can 250ml</option>
+    <!-- BISLERI -->
+    <option value="BISLERI|250ml|5">BISLERI 250ml</option>
+    <option value="BISLERI|500ml|6">BISLERI 500ml</option>
+    <option value="BISLERI|1L|16">BISLERI 1L</option>
+    <option value="BISLERI|2L|36">BISLERI 2L</option>
+    <!-- REAL JUICE -->
+    <option value="REAL JUICE|1L|130">REAL JUICE 1L</option>
+    <option value="REAL JUICE|500ml|80">REAL JUICE 500ml</option>
+    <!-- PAPER BOAT -->
+    <option value="PAPER BOAT|10rs|8">PAPER BOAT 10rs</option>
+    <option value="PAPER BOAT|20rs|16">PAPER BOAT 20rs</option>
+    <option value="PAPER BOAT|30rs|26">PAPER BOAT 30rs</option>
+    <!-- CAN -->
+    <option value="CAN|Diet Coke Can 300ml|36">Diet Coke Can 300ml</option>
+    <!-- REDBULL -->
+    <option value="REDBULL|250ml (Can)|106">REDBULL 250ml (Can)</option>
+    <!-- HELL -->
+    <option value="HELL|250ml (Can)|56">HELL 250ml (Can)</option>
+    <!-- MONSTER -->
+    <option value="MONSTER|500ml|395">MONSTER 500ml</option>
+    <option value="MONSTER|350ml|121">MONSTER 350ml</option>
+</select>
+ <label>Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1">
+
+        <button class="actionBtn" id="addBtn">Add to Cart</button>
+
+        <h3>Cart</h3>
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Size</th>
+                    <th>Qty</th>
+                    <th>Price/unit</th>
+                    <th>Boxes</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <button class="actionBtn" id="calculateBtn">Calculate Total</button>
+        <button class="actionBtn" id="whatsappBtn">Share on WhatsApp</button>
+        <div id="result"></div>
+    </div>
+</div>
+
+<script>
+let cart=[];
+const boxSize=30;
+
+// Open & Close modal
+document.getElementById("openOrderBtn").onclick = function(){
+    document.getElementById("orderModal").style.display="block";
+};
+document.getElementById("closeModal").onclick = function(){
+    document.getElementById("orderModal").style.display="none";
+};
+
+// Cart functionality
+document.getElementById("addBtn").addEventListener("click", addToCart);
+document.getElementById("calculateBtn").addEventListener("click", calculateTotal);
+document.getElementById("whatsappBtn").addEventListener("click", shareWhatsApp);
+
+function addToCart(){
+    let sel=document.getElementById("product").value;
+    let quantity=parseInt(document.getElementById("quantity").value);
+    if(isNaN(quantity)||quantity<1){alert("Enter valid quantity"); return;}
+    let parts=sel.split("|");
+    let productName=parts[0];
+    let size=parts[1]||"";
+    let pricePerUnit=parseFloat(parts[2]);
+    let found=cart.find(item=>item.productName===productName && item.size===size);
+    if(found){found.quantity+=quantity;} else{cart.push({productName,size,pricePerUnit,quantity});}
+    renderCart();
+}
+
+function renderCart(){
+    let tbody=document.querySelector("#cartTable tbody");
+    tbody.innerHTML="";
+    cart.forEach((item,index)=>{
+        let boxes=Math.floor(item.quantity/boxSize);
+        let total=item.quantity*item.pricePerUnit;
+        tbody.innerHTML+=`<tr>
+        <td>${item.productName}</td>
+        <td>${item.size}</td>
+        <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index},this.value)"></td>
+        <td>${item.pricePerUnit}</td>
+        <td>${boxes}</td>
+        <td>${total}</td>
+        <td><button onclick="removeItem(${index})">Remove</button></td>
+        </tr>`;
+    });
+}
+
+function updateQuantity(index,value){
+    let qty=parseInt(value);
+    if(qty<1){alert("Quantity must be at least 1"); return;}
+    cart[index].quantity=qty;
+    renderCart();
+}
+
+function removeItem(index){
+    cart.splice(index,1);
+    renderCart();
+}
+
+function calculateTotal(){
+    let totalQty=0,totalBoxes=0,totalPrice=0;
+    cart.forEach(item=>{
+        let boxes=Math.floor(item.quantity/boxSize);
+        totalQty+=item.quantity;
+        totalBoxes+=boxes;
+        totalPrice+=item.quantity*item.pricePerUnit;
+    });
+    document.getElementById("result").innerHTML=
+    `<b>Total Quantity:</b> ${totalQty}<br><b>Total Boxes:</b> ${totalBoxes}<br><b>Total Price:</b> ₹${totalPrice}`;
+}
+
+function shareWhatsApp(){
+    let userName=document.getElementById("username").value.trim();
+    let address=document.getElementById("address").value.trim();
+    if(!userName||!address){alert("Enter Name & Address"); return;}
+    if(cart.length===0){alert("Cart is empty"); return;}
+
+    let message=`*Order Summary*\n\n*Name:* ${userName}\n*Address:* ${address}\n\n*Items:*`;
+    cart.forEach(item=>{
+        let boxes=Math.floor(item.quantity/boxSize);
+        let total=item.quantity*item.pricePerUnit;
+        message+=`\n• ${item.productName} - Qty: ${item.quantity}, Boxes: ${boxes}, Total: ₹${total}`;
+    });
+
+    let whatsappURL=`https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL,'_blank');
+}
+</script>
+
+</body>
+>>>>>>> 14e46576bf33ea6fe27f36e5d1bf808349fb58c2
 </html>
